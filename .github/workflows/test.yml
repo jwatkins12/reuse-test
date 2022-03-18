@@ -1,0 +1,16 @@
+name: Test Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        type: string
+        required: true
+
+jobs:
+  call-workflow-passing-data:
+    uses: jwatkins12/reuse-test/.github/workflows/reuse.yml@main
+    with:
+      username: mona
+    secrets:
+      envPAT: ${{ secrets.envPAT }}
