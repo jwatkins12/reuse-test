@@ -11,6 +11,6 @@ jobs:
   call-workflow-passing-data:
     uses: jwatkins12/reuse-test/.github/workflows/reuse.yml@main
     with:
-      username: ${{ inputs.username }}
+      username: ${{ github.event.inputs.username }}
     secrets:
       token: ${{ secrets.TOKEN }}
