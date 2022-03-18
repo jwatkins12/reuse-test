@@ -11,6 +11,6 @@ jobs:
   call-workflow-passing-data:
     uses: jwatkins12/reuse-test/.github/workflows/reuse.yml@main
     with:
-      username: mona
+      username: ${{ inputs.username }}
     secrets:
-      envPAT: ${{ secrets.envPAT }}
+      token: ${{ secrets.TOKEN }}
