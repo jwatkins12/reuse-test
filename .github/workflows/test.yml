@@ -15,9 +15,9 @@ jobs:
     secrets:
       token: ${{ secrets.TOKEN }}
 
-    call-workflow-declaring-username:
-      uses: jwatkins12/reuse-test/.github/workflows/reuse.yml@main
-      with:
-        username: watkins
-      secrets:
-        token: ${{ secrets.TOKEN }}
+  call-workflow-declaring-username:
+    uses: jwatkins12/reuse-test/.github/workflows/reuse.yml@main
+    with:
+      username: watkins
+    secrets:
+      token: ${{ secrets.TOKEN }}
